@@ -1,0 +1,58 @@
+:root{
+  --bg: #fff7f9;
+  --card: #ffffff;
+  --accent: #f7c6d2;
+  --rose: #e76e95;
+  --muted: #6b6b6b;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font-body);background:var(--bg);color:#222}
+.container{max-width:980px;margin:0 auto;padding:20px}
+
+/* header */
+.site-header{background:transparent;padding:12px 0}
+.header-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:var(--font-heading);font-size:1.6rem;color:var(--rose);text-decoration:none}
+.logo .heart{color:var(--accent);margin-left:6px}
+.nav{display:flex;gap:18px}
+.nav a{text-decoration:none;color:#333;font-weight:500}
+
+/* hero */
+.hero{padding:60px 0;text-align:left}
+.hero h1{font-family:var(--font-heading);font-size:2.4rem;margin:0;color:var(--rose)}
+.lead{color:var(--muted);margin-top:8px;font-size:1.05rem}
+.btn{display:inline-block;margin-top:16px;padding:10px 16px;border-radius:8px;background:var(--rose);color:white;text-decoration:none}
+
+/* cards */
+.highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:30px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+/* content */
+.content h1{font-family:var(--font-heading);color:var(--rose)}
+
+/* timeline */
+.timeline{display:flex;flex-direction:column;gap:18px;margin-top:20px}
+.event{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,0.04)}
+
+/* carousel */
+.carousel{display:flex;align-items:center;gap:10px;justify-content:center;margin-top:20px}
+.slides{width:70%;display:flex;overflow:hidden;border-radius:12px}
+.slides img{width:100%;flex-shrink:0;object-fit:cover}
+
+/* notes */
+.notes{display:flex;gap:10px;margin-top:12px}
+.note{padding:10px 14px;border-radius:8px;border:none;background:var(--accent);cursor:pointer}
+.note-display{margin-top:18px;padding:18px;background:var(--card);border-radius:10px;min-height:80px;box-shadow:0 6px 12px rgba(0,0,0,0.04)}
+
+/* footer */
+.site-footer{margin-top:40px;padding:18px;text-align:center;color:var(--muted)}
+
+/* responsive */
+@media(max-width:700px){
+  .slides{width:100%}
+  .header-inner{flex-direction:column;gap:12px;align-items:flex-start}
+  .nav{flex-wrap:wrap}
+}
